@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev3_1_js-vertiefung_events_dynamische_website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meine dynamische Webseite</h1>
+    <p>Die Farbe wurde <span id="countVar"></span> mal geändert.
+    </p>
+    <p id="demo">Wähle eine Farbe:</p>
+    <p>
+        <button onclick="changeBackground('pink')">Rosa</button>
+        <button onclick="changeBackground('purple')">Lila</button>
+        <button onclick="changeBackground('orange')">Orange</button>
+    </p>
+    <p>
+        <input type="range" id="rot" value="255" min="0" max="255" onchange="changeHandle()" style="background:red">
+        Rot<br>
+        <input type="range" id="grun" value="255" min="0" max="255" onchange="changeHandle()" style="background:green">
+        Grün<br>
+        <input type="range" id="blau" value="255" min="0" max="255" onchange="changeHandle()" style="background:blue">
+        Blau
+    </p>
+    <p>Die Farbe ist in "rgb":
+        <span id="out-rgb"></span><span> als "hex": </span><span id="out-hex"></span>
+    </p>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
